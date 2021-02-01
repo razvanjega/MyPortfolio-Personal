@@ -82,7 +82,7 @@
 /* Menu btn styling */
 
 .menu-btn {
-  color: #fff;
+  color: rgb(20, 183, 220);;
   font-size: 23px;
   cursor: pointer;
   display: none;
@@ -102,7 +102,7 @@
 }
 
 .home .max-width {
-  margin: auto 0 auto 40px;
+  margin: auto 0 auto 500px;
 }
 
 .home .home-content .text-1 {
@@ -144,8 +144,64 @@
     background:none;
 }
 
+/* About Section Styling*/
+
+section{
+    padding: 100px 0;
+}
+.about{
+    font-family: "Poppins", "sans-serif";
+}
+
+.about .title{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    color: #3b3b3b;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.about .title::before{
+    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 36.24
+}
+
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+}
+
 
 /* Responsive media query start */
+
+
+@media (max-width: 2000px) {
+    .home .max-width {
+      margin-left: 0;
+    }
+  }
+  
+@media (max-width: 2000px) {
+    max-width {
+      padding: 0 50px;
+    }
+  }
+
+@media (max-width: 1300px) {
+    .home .max-width {
+      margin-left: 0;
+    }
+  }
+  
+@media (max-width: 1300px) {
+    max-width {
+      padding: 0 50px;
+    }
+  }
+  
+
 @media (max-width: 1104px) {
   .home .max-width {
     margin-left: 0;
@@ -224,6 +280,8 @@
   }
 
   @media (max-width: 690px) {
+
+    
     max-width {
       padding: 0 25px;
     }
@@ -243,6 +301,8 @@
   }
 
   @media (max-width: 500px) {
+
+    
     max-width {
       padding: 0 25px;
     }
