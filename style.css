@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.max-width {
+  max-width: 1300px;
+  padding: 0px 80px;
+  margin: auto;
+}
+
+/* Navbar Styling */
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 30px 0;
+  font-family: "Ubuntu", sans-serif;
+  transition: all 0.2s ease;
+}
+
+.navbar.sticky {
+  padding: 15px 0;
+  background-color: rgb(20, 183, 220);
+  box-shadow: 1px 2px 15px #c7c7c7;
+}
+
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo a {
+  color: #3b3b3b;
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.navbar.sticky .logo a {
+  color: white;
+}
+
+.navbar .logo a span {
+  color: rgb(20, 183, 220);
+  transition: all 0.3s ease;
+}
+
+.navbar.sticky .logo span {
+  color: #3b3b3b;
+  transition: all 0.3s ease;
+}
+
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+
+.navbar.sticky .menu a {
+  color: white;
+}
+
+.navbar.sticky .menu a:hover {
+  color: #3b3b3b;
+}
+
+.navbar .menu li a {
+  color: #3b3b3b;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+  color: rgb(20, 183, 220);
+}
+
+/* Menu btn styling */
+
+.menu-btn {
+  color: #fff;
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Home Section Styling */
+
+.home {
+  display: flex;
+  background: url("/img/banner.png") no-repeat center;
+  background-size: cover;
+  background-position: fixed;
+  height: 100vh;
+  color: #3b3b3b;
+  min-height: 500px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.home .max-width {
+  margin: auto 0 auto 40px;
+}
+
+.home .home-content .text-1 {
+  font-size: 20px;
+}
+
+.home .home-content .text-2 {
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+
+.home .home-content .text-3 {
+  font-size: 15px;
+  margin: 5px 0;
+}
+
+.home .home-content .text-3 span {
+  color: rgb(20, 183, 220);
+  font-weight: 500;
+}
+
+.home .home-content a{
+    display: inline-block;
+    background-color: rgb(20, 183, 220);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 8px 10px;
+    border-radius: 15px;
+    margin: 20px 0;
+    border: 3px solid  rgb(20, 183, 220);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.home .home-content a:hover{
+    color:rgb(20, 183, 220);
+    background:none;
+}
+
+
+/* Responsive media query start */
+@media (max-width: 1104px) {
+  .home .max-width {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  max-width {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 947px) {
+  .menu-btn {
+    display: block;
+    z-index: 999;
+  }
+
+  .menu-btn i.active::before {
+    content: "\f00d";
+  }
+
+  .navbar .menu {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    right: -100%;
+    top: 0;
+    background: rgb(20, 183, 220, 0.9);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    padding-top: 80px;
+    transition: all 0.3s ease;
+  }
+
+  .navbar .menu.active {
+    right: 0;
+  }
+
+  .navbar .menu li {
+    display: block;
+  }
+
+  .navbar .menu li a {
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 25px;
+    color: #fff;
+  }
+
+  .navbar .menu li a:hover {
+    color: #3b3b3b;
+  }
+
+  .navbar .menu li a {
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 25px;
+  }
+
+  .home .home-content .text-1 {
+    font-size: 30px;
+  }
+
+  .home .home-content .text-2 {
+    font-size: 80px;
+  }
+
+  .home .home-content .text-3 {
+    font-size: 20px;
+  }
+
+  .home .home-content a{
+      font-size: 20px;
+      padding: 10px 30px;
+  }
+
+  @media (max-width: 690px) {
+    max-width {
+      padding: 0 25px;
+    }
+
+    .home .home-content .text-2 {
+      font-size: 70px;
+    }
+
+    .home .home-content .text-3 {
+      font-size: 15px;
+    }
+
+    .home .home-content a{
+        font-size: 25px;
+        padding: 8px 20px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    max-width {
+      padding: 0 25px;
+    }
+
+    .home .home-content .text-2 {
+      font-size: 60px;
+    }
+
+    .home .home-content .text-3 {
+      font-size: 10px;
+    }
+  }
+}
