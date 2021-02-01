@@ -29,6 +29,7 @@
       .navbar {
         position: fixed;
         width: 100%;
+        z-index: 999;
         padding: 30px 0;
         font-family: "Ubuntu", sans-serif;
         transition: all 0.2s ease;
@@ -72,7 +73,7 @@
       }
 
       .navbar.sticky .menu a {
-        color: #fff;
+        color: white;
       }
 
       .navbar.sticky .menu a:hover {
@@ -114,7 +115,7 @@
       }
 
       .home .max-width {
-        margin: auto 0 auto 500px;
+        margin: auto 0 auto 800px;
       }
 
       .home .home-content .text-1 {
@@ -166,6 +167,7 @@
       }
 
       .about .title {
+        position: relative;
         text-align: center;
         font-size: 40px;
         font-weight: 500;
@@ -176,30 +178,94 @@
       }
 
       .about .title::before {
-        /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 36.24 */
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        width: 180px;
+        height: 3px;
+        background: #3b3b3b;
+        transform: translate(-50%);
+      }
+
+      .about .title::after {
+        content: "Who i am";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        font-size: 20px;
+        color: rgb(20, 183, 220);
+        padding: 5px;
+        background: #fff;
+        transform: translate(-50%);
+      }
+
+      .about .about-content {
+        display:flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .about .about-content .left {
+        width: 45%;
       }
 
       .about .about-content .left img {
         height: 400px;
         width: 400px;
         object-fit: cover;
+        border-radius: 300px;
       }
+
+      .about .about-content .right {
+        width: 55%;
+      }
+
+      .about .about-content .right .text {
+        font-size: 25px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+            
+      .about .about-content .right .text span {
+        color:rgb(20, 183, 220);
+      }
+
+      .about .about-content .right p{
+        text-align: justify;
+      }
+
+      .about .about-content .right a{
+        display: inline-block;
+        background-color: rgb(20, 183, 220);
+        color: #fff;
+        font-size: 15px;
+        font-weight: 600;
+        padding: 1px 30px;
+        border-radius: 15px;
+        margin: 20px 0;
+        border: 3px solid rgb(20, 183, 220);
+        transition: all 0.3s ease;
+        text-decoration: none;
+      }
+
+      .about .about-content .right a:hover{
+        color: rgb(20, 183, 220);
+        background: none;
+      }
+      
+
+
+
 
       /* Responsive media query start */
 
       @media (max-width: 2000px) {
-        .home .max-width {
-          margin-left: 0;
-        }
-      }
-
-      @media (max-width: 2000px) {
         max-width {
           padding: 0 50px;
         }
-      }
 
-      @media (max-width: 1300px) {
         .home .max-width {
           margin-left: 0;
         }
@@ -209,11 +275,15 @@
         max-width {
           padding: 0 50px;
         }
-      }
+
+        .home .max-width {
+          margin-left: 0;
+        }
 
       @media (max-width: 1104px) {
-        .home .max-width {
-          margin-left: 0;
+        .about .about-content .left img{
+          height: 350px;
+          width: 350px;
         }
       }
 
@@ -273,15 +343,15 @@
         }
 
         .home .home-content .text-1 {
-          font-size: 30px;
+          font-size: 25px;
         }
 
         .home .home-content .text-2 {
-          font-size: 80px;
+          font-size: 70px;
         }
 
         .home .home-content .text-3 {
-          font-size: 20px;
+          font-size: 15px;
         }
 
         .home .home-content a {
@@ -289,17 +359,26 @@
           padding: 10px 30px;
         }
 
+        .about .about-content .column{
+          width: 50%;
+          
+        }
+
         @media (max-width: 690px) {
           max-width {
             padding: 0 25px;
           }
 
+          .home .home-content .text-1 {
+            font-size: 20px;
+          }
+
           .home .home-content .text-2 {
-            font-size: 70px;
+            font-size: 65px;
           }
 
           .home .home-content .text-3 {
-            font-size: 15px;
+            font-size: 10px;
           }
 
           .home .home-content a {
@@ -379,6 +458,24 @@
         <div class="about-content">
           <div class="column left">
             <img src="https://i.ibb.co/C0HPrtL/me.png" alt="" />
+          </div>
+          <div class="column right">
+            <div class="text">
+              I'm Jeradev and I'm a
+              <span>Frontend - Content Developer & Content Creator</span>
+            </div>
+            <br>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro
+              necessitatibus rem in reiciendis hic quis libero eligendi sit et
+              autem quaerat vel deleniti enim rerum, ab atque perferendis veniam
+              aperiam ea consequatur, commodi doloremque! Voluptatum sed
+              dignissimos autem praesentium enim necessitatibus quaerat labore
+              rerum veritatis quos cupiditate mollitia, fugit dicta nemo neque
+              sit. Voluptate omnis ab consequuntur aliquam dolorum. Doloremque.
+            </p>
+            <br>
+            <a href="mailto:jeradev@hotmail.com">Download CV</a>
           </div>
         </div>
       </div>
